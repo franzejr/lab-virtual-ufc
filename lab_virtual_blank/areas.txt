@@ -1,0 +1,4 @@
+A*:a_estrela
+Busca em Árvores:busca_arvores
+MiniMax:minimax
+Hill Climbing:hill_climbing

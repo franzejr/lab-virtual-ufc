@@ -1,0 +1,3 @@
+hello.cpp:1:2: error: invalid preprocessing directive #finclude
+hello.cpp: In function 'int main()':
+hello.cpp:5:21: error: 'printf' was not declared in this scope

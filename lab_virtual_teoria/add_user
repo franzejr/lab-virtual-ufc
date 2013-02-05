@@ -1,0 +1,4 @@
+mkdir students/$1
+chmod 775 students/$1
+echo "$1:$2" >> users.txt
+cp examples/* students/$1

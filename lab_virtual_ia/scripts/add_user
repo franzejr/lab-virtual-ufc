@@ -1,0 +1,6 @@
+mkdir ../students/$1
+chmod 777 ../students/$1
+echo "$1" >> ../users.txt
+touch ../students/$1/.password
+echo "$1" >> ../students/$1/.password
+cp ../examples/* ../students/$1

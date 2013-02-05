@@ -1,0 +1,614 @@
+<!DOCTYPE 
+  html PUBLIC 
+  "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head>
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type"  content="text/html;charset=UTF-8" />
+    <meta name="description" content="Free Online Coding Dojo" />
+    <meta name="keywords" content="Free Online Coding Dojo Kata Deliberate Software Team Practice" />
+    <meta name="author" content="Jon Jagger" />
+    <title>71A73 code wolf</title>  
+    
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="zE8omxYBNxgXv/Dm+MA/icgGwu9vy5ih+u60RGmheK0=" name="csrf-token" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/assets/application-4995ac829e6b91db29c926cd5d3e12d6.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-2f9b2b9f16b3388be257e8ce7d0635f1.js" type="text/javascript"></script>
+    <script type="text/javascript">var cd = cyberDojo;</script>
+  </head>
+  
+  <body>
+    <table valign="top" align="center">
+      <tr>
+        <td>
+          <div id="cyber_dojo_page">
+            
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+  
+  cd.tabExpansion = function() {
+    return "    ";
+  };
+  
+  cd.supportFilenames = function() {
+    return $.parseJSON('[]');
+  };
+  
+  cd.hiddenFilenames = function() {
+    return $.parseJSON('[]');
+  };  
+
+});
+
+//--></script>
+
+<form accept-charset="UTF-8" action="/kata/run_tests/71A733F710?avatar=wolf" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zE8omxYBNxgXv/Dm+MA/icgGwu9vy5ih+u60RGmheK0=" /></div>  
+
+  
+<!-- See comment in app/assets/javascripts/cyber-dojo-files.js currentFilename() -->
+
+<input type="hidden"	  	
+       name="current_filename"	  	
+       id="current_filename"
+       value=""/>
+
+  
+  <table cellpadding="0" cellspacing="0">
+    <tr valign="top">
+      <td class="panel">
+        
+<div>
+  <table>
+    <tr>
+      <td align="center">
+        
+<a href="/?id=71A733F710" target="expression"><img alt="Cyber-dojo" border="0" height="37" src="/images/avatars/cyber-dojo.png" title="Home page" width="37" /></a>              
+
+        <br/>
+        
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#id').click(function() {
+  
+    var daySuffix = function(day) {
+      if (Math.floor(day / 10) === 1) {
+        return "th";
+      } else {
+        switch (day % 10) {
+          case 1 : return "st";
+          case 2 : return "nd";
+          case 3 : return "rd";
+          default: return "th";
+        }
+      }
+    };
+
+    var timeString = function() {
+      var hourMinute = "12:35PM";
+      var dayName = "Mon";
+      var day = 3;
+      var monthYear = "Dec 2012";
+      return hourMinute + ' ' + dayName + ' ' + day + daySuffix(day) + ' ' + monthYear;
+    };
+  
+    var info = {
+        "language" : "C",
+       "unit-test" : "cassert",
+        "exercise" : "100_doors",
+         "created" : timeString(),
+    };
+    
+    cd.dialog_id("71A733F710",info);
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Show info"
+       id="id"
+       value="71A73"/>
+
+      </td>
+      <td align="center">
+        
+<a href="/dashboard/show/71A733F710" target="_blank"><img alt="Wolf" border="0" class="cyber_dojo_image" height="47" src="/images/avatars/wolf.jpg" title="Open a dashboard page" width="47" /></a>
+
+        
+<div>
+  wolf
+</div>
+
+      </td>
+      <td>
+      </td>
+      <td valign="center">
+        
+<div id="current_traffic_light_count">
+      <span class="tag_count amber">
+        4
+      </span>
+    </td>        
+</div>
+
+
+      </td>      
+    </tr>
+  </table>
+</div>
+
+
+      </td>
+      <td class="panel">
+        
+<div id="traffic_lights">
+  <table>
+    <tr class="row">
+            
+        <td valign="top">
+          <a href="/diff/show/71A733F710?avatar=wolf&amp;from_tag=0&amp;to_tag=1" target="_blank" title="Show the diff of wolf traffic-light #1 (2012 Dec 3, 12:36:23)"><img src='/images/traffic_light_red.png' border='0' width='20' height='65'/></a>
+        </td>
+        <td valign="top">
+          <a href="/diff/show/71A733F710?avatar=wolf&amp;from_tag=1&amp;to_tag=2" target="_blank" title="Show the diff of wolf traffic-light #2 (2012 Dec 3, 12:45:29)"><img src='/images/traffic_light_red.png' border='0' width='20' height='65'/></a>
+        </td>
+        <td valign="top">
+          <a href="/diff/show/71A733F710?avatar=wolf&amp;from_tag=2&amp;to_tag=3" target="_blank" title="Show the diff of wolf traffic-light #3 (2012 Dec 3, 12:45:57)"><img src='/images/traffic_light_amber.png' border='0' width='20' height='65'/></a>
+        </td>
+        <td valign="top">
+          <a href="/diff/show/71A733F710?avatar=wolf&amp;from_tag=3&amp;to_tag=4" target="_blank" title="Show the diff of wolf traffic-light #4 (2012 Dec 3, 12:50:27)"><img src='/images/traffic_light_amber.png' border='0' width='20' height='65'/></a>
+        </td>
+            
+      <td>
+        <div id="tip"
+             style="font-size:0.8em;">
+                Click any<br/>
+                traffic-light<br/>
+                to open a<br/>
+                diff-view
+        </div>
+      </td>      
+            
+    </tr>      
+  </table>
+</div>
+
+
+      </td>
+    </tr>    
+    <tr valign="top">
+      <td>
+        <div class="panel">
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+    
+  var spinners = $('.spinner');
+  var test = $('#test');
+  
+  spinners.hide();
+
+  $('form').bind('ajax:before', function(evt, data, status, xhr) {
+    test.attr('disabled', true);
+    spinners.show();    
+  });
+  
+  $('form').bind('ajax:complete', function(evt, data, status, xhr) {
+    spinners.hide();    
+    test.attr('disabled', false);
+    $('#tip').hide();
+    // when the ajax replaces output the shortcuts
+    // are lost so need rebinding
+    var output = cd.fileContentFor('output');
+    cd.bindHotKeys(output);        
+    cd.loadFile('output');    
+  });
+  
+});
+
+//--></script>
+
+<table align="center">
+  <tr>
+    <td>
+      
+<div class="spinner">
+  <img src="/images/spinner.gif"          
+       width="20" 
+       height="20"/>
+</div>
+
+    </td>
+    <td>
+      <input type="submit"
+             class="button"
+             id="test"
+             value="test"
+             title="Run the tests and generate a new traffic-light" />
+    </td>
+    <td>
+      
+<div class="spinner">
+  <img src="/images/spinner.gif"          
+       width="20" 
+       height="20"/>
+</div>
+
+    </td>
+  </tr>
+</table>
+
+          <br/>
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  var filenames = cd.filenames();
+  var filename, file, i, max;
+  
+  for (i = 0, max = filenames.length; i < max; i += 1) {
+    filename = filenames[i];
+    file = cd.fileContentFor(filename);
+    cd.bindHotKeys(file);
+    if (filename !== 'output') {
+      cd.tabber(file);
+    }
+  }
+  cd.bindAllLineNumbers();
+  cd.rebuildFilenameList();
+  cd.loadFile(filenames[cd.rand(max)]);
+
+});
+
+//--></script>
+
+<div id="filename_list">
+</div>
+
+
+
+          <br/>
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  var fileButtons =  $('#file_operations');
+  fileButtons.find('#new').click(function() {
+    cd.newFile(); 
+  });
+  fileButtons.find('#rename').click(function() {
+    cd.renameFile("wolf");
+  });
+  fileButtons.find('#delete').click(function() {
+    cd.deleteFile("wolf");
+  });
+
+});
+
+//--></script>
+
+<div id="file_operations">
+  <table>
+    <tr>
+      <td class="button" id="new">new</td>
+    </tr>
+    <tr>
+      <td class="button" id="rename">rename</td>
+    </tr>
+    <tr>
+      <td class="button" id="delete">delete</td>
+    </tr>
+  </table>
+</div>
+
+        </div>        
+        <div class="panel">          
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#help').click(function() {
+    cd.dialog_kata_help("wolf");
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Show help"
+       id="help"
+       value="?"/>
+
+          <br/>
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#donate').click(function() {
+    cd.postTo('https://www.paypal.com/cgi-bin/webscr',
+      { cmd: '_s-xclick',
+        hosted_button_id: '7HAUYJCMFCS8C'
+      }, '_blank');                  
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Make donation to buy Raspberry Pi'es for schools"
+       id="donate"
+       value="donate"/>
+
+          <br/>
+          
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#feedback').click(function() {
+    cd.dialog_feedback();
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Give feedback"
+       id="feedback"
+       value="feedback"/>
+
+        </div>
+      </td>
+      <td>
+        
+<div id="visible_files_container"
+     class="edgeless panel">
+  
+    <div class="filename_div"
+         name="untitled.c"
+         id="untitled.c_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="untitled.c_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['untitled.c']"
+                        id="file_content_for_untitled.c"
+                        wrap="off">
+#include &quot;untitled.h&quot;
+
+int hhg(void)
+{
+    while(1);
+}
+
+</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="untitled.h"
+         id="untitled.h_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="untitled.h_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['untitled.h']"
+                        id="file_content_for_untitled.h"
+                        wrap="off">
+#ifndef UNTITLED_INCLUDED
+#define UNTITLED_INCLUDED
+
+int hhg(void);
+
+#endif
+
+</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="makefile"
+         id="makefile_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="makefile_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['makefile']"
+                        id="file_content_for_makefile"
+                        wrap="off">
+run.tests.output : run.tests
+	./run.tests
+
+run.tests : *.c 
+	gcc -Wall -Werror -O -std=c99 *.c -o run.tests
+</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="untitled.tests.c"
+         id="untitled.tests.c_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="untitled.tests.c_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['untitled.tests.c']"
+                        id="file_content_for_untitled.tests.c"
+                        wrap="off">
+#include &quot;untitled.h&quot;
+#include &lt;assert.h&gt;
+#include &lt;stdio.h&gt;
+
+static void example(void)
+{
+    assert(hhg() == 6*9);
+}
+
+typedef void test(void);
+
+static test * tests[ ] =
+{
+    example,
+    (test*)0,
+};
+
+int main(void)
+{
+    size_t at = 0;
+    while (tests[at])
+    {
+        tests[at++]();
+        putchar('.');
+    }
+    printf(&quot;\n%zd tests passed&quot;, at);
+    return 0;
+}
+
+</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="cyber-dojo.sh"
+         id="cyber-dojo.sh_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="cyber-dojo.sh_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['cyber-dojo.sh']"
+                        id="file_content_for_cyber-dojo.sh"
+                        wrap="off">
+make
+</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="output"
+         id="output_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="output_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              
+<div id="output">
+  <textarea class="file_content"
+            name="file_content['output']"
+            id="file_content_for_output"
+            readonly="readonly"
+            wrap="on">Terminated by the cyber-dojo server after 10 seconds.</textarea>
+</div>
+
+
+        
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+    <div class="filename_div"
+         name="instructions"
+         id="instructions_div">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <textarea class="line_numbers"
+                      id="instructions_line_numbers">
+            </textarea>
+          </td>
+          <td>
+              <textarea class="file_content"
+                        name="file_content['instructions']"
+                        id="file_content_for_instructions"
+                        wrap="off">
+100 doors in a row are all initially closed. You make
+100 passes by the doors. The first time through, you
+visit every door and toggle the door (if the door is
+closed, you open it; if it is open, you close it).
+The second time you only visit every 2nd door (door
+#2, #4, #6, ...). The third time, every 3rd door
+(door #3, #6, #9, ...), etc, until you only visit
+the 100th door.
+
+Question: What state are the doors in after the last
+pass? Which are open, which are closed?
+
+[Source http://rosettacode.org]</textarea>                                     
+          </td>
+        </tr>
+      </table>
+    </div>
+        
+  
+</div>
+
+
+      </td>
+    </tr>
+  </table>
+  
+</form>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+

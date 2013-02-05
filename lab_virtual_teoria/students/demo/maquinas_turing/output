@@ -1,0 +1,18 @@
+Turing Machines Editor - Web Applet - Comp UFC 2012.1
+Initial state: q0
+Tape initial configuration: @_#aaa#
+1.   q1  @#_aaa#
+2.   q2  @#_#aa#
+3.   q1  @##_aa#
+4.   q2  @##_#a#
+5.   q1  @###_a#
+6.   q2  @###_##
+7.   q1  @####_#
+8.   q1  @###_##
+9.   q1  @##_###
+10.  q1  @#_####
+11.  q1  @_#####
+12.  q1  _@#####
+13.  q3  @_#####
+Finished executing in 13 steps.
+Tape final configuration is: @_#####

@@ -1,0 +1,4 @@
+  File "hello.py", line 1
+    print "heuheuh
+                 ^
+SyntaxError: EOL while scanning string literal

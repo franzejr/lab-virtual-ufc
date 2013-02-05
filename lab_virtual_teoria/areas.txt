@@ -1,0 +1,4 @@
+Simulador de M√°quinas de Turing:maquinas_turing
+Simulador de Diagramas de Turing:diagramas_turing
+Simulador de Linguagem L:diagramas_turing
+Simulador de Fun√√es Recursivas Primitivas:#

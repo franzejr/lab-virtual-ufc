@@ -1,0 +1,24 @@
+Turing Machines Editor - Comp UFC 2012.1
+Initial state: q0
+Tape initial configuration: @_#aaaaa#
+1.   q1  @#_aaaaa#
+2.   q2  @#_#aaaa#
+3.   q1  @##_aaaa#
+4.   q2  @##_#aaa#
+5.   q1  @###_aaa#
+6.   q2  @###_#aa#
+7.   q1  @####_aa#
+8.   q2  @####_#a#
+9.   q1  @#####_a#
+10.  q2  @#####_##
+11.  q1  @######_#
+12.  q1  @#####_##
+13.  q1  @####_###
+14.  q1  @###_####
+15.  q1  @##_#####
+16.  q1  @#_######
+17.  q1  @_#######
+18.  q1  _@#######
+19.  q3  @_#######
+Finished executing in 19 steps.
+Tape final configuration is: @_#######

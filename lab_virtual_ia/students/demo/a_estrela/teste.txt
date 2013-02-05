@@ -1,0 +1,2 @@
+Esse arquivo eh um arquivo.txt que foi escrito por alguem
+Editado.

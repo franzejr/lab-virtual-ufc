@@ -1,0 +1,570 @@
+<!DOCTYPE 
+  html PUBLIC 
+  "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head>
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type"  content="text/html;charset=UTF-8" />
+    <meta name="description" content="Free Online Coding Dojo" />
+    <meta name="keywords" content="Free Online Coding Dojo Kata Deliberate Software Team Practice" />
+    <meta name="author" content="Jon Jagger" />
+    <title>71A73 diff wolf</title>  
+    
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="zE8omxYBNxgXv/Dm+MA/icgGwu9vy5ih+u60RGmheK0=" name="csrf-token" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/assets/application-4995ac829e6b91db29c926cd5d3e12d6.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-2f9b2b9f16b3388be257e8ce7d0635f1.js" type="text/javascript"></script>
+    <script type="text/javascript">var cd = cyberDojo;</script>
+  </head>
+  
+  <body>
+    <table valign="top" align="center">
+      <tr>
+        <td>
+          <div id="cyber_dojo_page">
+                    
+<table cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <div class="panel">
+        
+<table>
+  <tr>
+    <td align="center">
+      
+<a href="/?id=71A733F710" target="expression"><img alt="Cyber-dojo" border="0" height="37" src="/images/avatars/cyber-dojo.png" title="Home page" width="37" /></a>              
+
+      <br/>
+      
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#id').click(function() {
+  
+    var daySuffix = function(day) {
+      if (Math.floor(day / 10) === 1) {
+        return "th";
+      } else {
+        switch (day % 10) {
+          case 1 : return "st";
+          case 2 : return "nd";
+          case 3 : return "rd";
+          default: return "th";
+        }
+      }
+    };
+
+    var timeString = function() {
+      var hourMinute = "12:35PM";
+      var dayName = "Mon";
+      var day = 3;
+      var monthYear = "Dec 2012";
+      return hourMinute + ' ' + dayName + ' ' + day + daySuffix(day) + ' ' + monthYear;
+    };
+  
+    var info = {
+        "language" : "C",
+       "unit-test" : "cassert",
+        "exercise" : "100_doors",
+         "created" : timeString(),
+    };
+    
+    cd.dialog_id("71A733F710",info);
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Show info"
+       id="id"
+       value="71A73"/>
+      
+    </td>
+    <td align="center">
+      
+<a href="/dashboard/show/71A733F710" target=""><img alt="Wolf" border="0" class="cyber_dojo_image" height="47" src="/images/avatars/wolf.jpg" title="Open a dashboard page" width="47" /></a>
+
+      
+<div>
+  wolf
+</div>
+
+    </td>
+    <td>
+      &nbsp;
+    </td>
+    <td valign="top">
+      <span title='2012 Dec 3, 12:45:57'><img src='/images/traffic_light_amber.png' border='0' width='20' height='65'/></span>
+    </td>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+      
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+  
+  $('#fork_button').click(function() {
+      cd.postTo('/forker/fork', {
+        id: "71A733F710",
+        avatar: "wolf",
+        tag: "3"
+      }, '_blank');
+    });
+
+});
+
+//--></script>
+
+
+<div id="fork_button">
+<img alt="Fork" border="0" class="cyber_dojo_image" height="40" src="/images/fork.png" title="Fork a new cyber-dojo from these files" width="40" />
+</div>
+
+
+    </td>
+  </tr>
+</table>
+
+
+      </div> 
+      <div class="panel">
+        
+<script language="JavaScript"
+        type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  var  minTag = 1;
+  var fromTag = 2;
+  var   toTag = 3;
+  var  maxTag = 4;
+  
+  var showDiff = function(from, to) {
+    cd.postTo('/diff/show', {
+      id: "71A733F710",
+      avatar: "wolf",
+      from_tag: from,
+      to_tag: to
+    });
+  };
+
+  var gotoDiffTitle = function(name, n) {
+    return 'Show ' + name + ' diff (' + (n-1) + '-' + n + ')';  
+  };
+  
+  var tagEdit = function(event) {
+    var CARRIAGE_RETURN = 13;      
+    if (event.keyCode === CARRIAGE_RETURN) {
+      var fromInput = $('#from_tag_number');
+      var newFromTag = parseInt(fromInput.attr('value'), 10);
+      var toInput = $('#to_tag_number');
+      var newToTag = parseInt(toInput.attr('value'), 10);
+      
+      if (isNaN(newFromTag) || newFromTag < minTag ||
+          isNaN(newToTag)   || newToTag > maxTag ||
+	  newFromTag >= newToTag) {
+	newFromTag = fromTag;
+	newToTag = toTag;
+      }
+      if (newFromTag === fromTag && newToTag === toTag) {
+        fromInput.attr('value', newFromTag);
+	toInput.attr('value', newToTag);
+      } else {
+	showDiff(newFromTag, newToTag);
+      }
+    }        
+  };
+  
+  $('#first_button').click(function()      { showDiff(minTag-1, minTag); });
+  $('#prev_button' ).click(function()      { showDiff(toTag-2, toTag-1);  });
+  
+  $('#from_tag_number').keyup(function(event) { tagEdit(event); });
+  $('#to_tag_number'  ).keyup(function(event) { tagEdit(event); });
+  
+  $('#next_button' ).click(function()      { showDiff(toTag, toTag+1);  });
+  $('#last_button' ).click(function()      { showDiff(maxTag-1, maxTag);  });
+
+  if (fromTag < minTag) {
+    $('#first_button').attr('disabled', true);
+    $('#prev_button' ).attr('disabled', true);
+  } else {
+    $('#first_button').attr('title', gotoDiffTitle('first', 1));
+    $('#prev_button' ).attr('title', gotoDiffTitle('previous', toTag-1));  
+  }
+
+  if (toTag >= maxTag) {
+    $('#next_button').attr('disabled', true);
+    $('#last_button').attr('disabled', true);
+  } else {
+    $('#next_button').attr('title', gotoDiffTitle('next', toTag+1));
+    $('#last_button').attr('title', gotoDiffTitle('last', maxTag));
+  }
+
+  $('#from_tag_number').attr('value', fromTag);
+  $('#to_tag_number').attr('value', toTag);
+});
+
+//--></script>
+
+<table align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td>
+      
+
+<button class="triangle button"
+        id="first_button"
+	type="button">
+  <img src="/images/triangle_first.gif"
+       width="22" 
+       height="22" />
+</button>      
+
+    </td>                
+    <td>
+      
+
+<button class="triangle button"
+        id="prev_button"
+	type="button">
+  <img src="/images/triangle_prev.gif"
+       width="22" 
+       height="22" />
+</button>      
+
+    </td>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+      
+
+<button class="triangle button"
+        id="next_button"
+	type="button">
+  <img src="/images/triangle_next.gif"
+       width="22" 
+       height="22" />
+</button>      
+
+    </td>
+    <td>
+      
+
+<button class="triangle button"
+        id="last_button"
+	type="button">
+  <img src="/images/triangle_last.gif"
+       width="22" 
+       height="22" />
+</button>      
+
+    </td>
+  </tr>
+</table>      
+
+<table align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td>
+      <input type="text" id="from_tag_number" value="" />
+    </td>
+    <td>&rarr;</td>
+    <td>
+      <input type="text" id="to_tag_number" value="" />
+    </td>   
+  </tr>
+</table>
+
+
+        <br/>
+        
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  cd.buildDiffFilenameHandlers([{"id":"id_2FF9B8065A","name":"cyber-dojo.sh","section_count":0,"deleted_line_count":0,"added_line_count":0,"content":"<same><ln>  1</ln>make</same>"},{"id":"id_5A8BE3F4A3","name":"instructions","section_count":0,"deleted_line_count":0,"added_line_count":0,"content":"<same><ln>  1</ln>100 doors in a row are all initially closed. You make</same><same><ln>  2</ln>100 passes by the doors. The first time through, you</same><same><ln>  3</ln>visit every door and toggle the door (if the door is</same><same><ln>  4</ln>closed, you open it; if it is open, you close it).</same><same><ln>  5</ln>The second time you only visit every 2nd door (door</same><same><ln>  6</ln>#2, #4, #6, ...). The third time, every 3rd door</same><same><ln>  7</ln>(door #3, #6, #9, ...), etc, until you only visit</same><same><ln>  8</ln>the 100th door.</same><same><ln>  9</ln></same><same><ln> 10</ln>Question: What state are the doors in after the last</same><same><ln> 11</ln>pass? Which are open, which are closed?</same><same><ln> 12</ln></same><same><ln> 13</ln>[Source http://rosettacode.org]</same>"},{"id":"id_254EEEF61E","name":"makefile","section_count":0,"deleted_line_count":0,"added_line_count":0,"content":"<same><ln>  1</ln>run.tests.output : run.tests</same><same><ln>  2</ln>\t./run.tests</same><same><ln>  3</ln></same><same><ln>  4</ln>run.tests : *.c </same><same><ln>  5</ln>\tgcc -Wall -Werror -O -std=c99 *.c -o run.tests</same>"},{"id":"id_D6DCE691CB","name":"output","section_count":1,"deleted_line_count":3,"added_line_count":2,"content":"<same><ln>  1</ln>gcc -Wall -Werror -O -std=c99 *.c -o run.tests</same><span id='id_id_D6DCE691CB_section_0'></span><deleted><ln>  2</ln>./run.tests</deleted><deleted><ln>  3</ln>run.tests: untitled.tests.c:7: example: Assertion `hhg() == 6*9' failed.</deleted><deleted><ln>  4</ln>make: *** [run.tests.output] Aborted</deleted><added><ln>  2</ln>untitled.c:3:1: error: unknown type name 'aaaint'</added><added><ln>  3</ln>make: *** [run.tests] Error 1</added>"},{"id":"id_E239ECBFEE","name":"untitled.c","section_count":1,"deleted_line_count":1,"added_line_count":1,"content":"<same><ln>  1</ln>#include &quot;untitled.h&quot;</same><same><ln>  2</ln></same><span id='id_id_E239ECBFEE_section_0'></span><deleted><ln>  3</ln>int hhg(void)</deleted><added><ln>  3</ln>aaaint hhg(void)</added><same><ln>  4</ln>{</same><same><ln>  5</ln>    return 42;</same><same><ln>  6</ln>}</same><same><ln>  7</ln></same>"},{"id":"id_374D410C07","name":"untitled.h","section_count":0,"deleted_line_count":0,"added_line_count":0,"content":"<same><ln>  1</ln>#ifndef UNTITLED_INCLUDED</same><same><ln>  2</ln>#define UNTITLED_INCLUDED</same><same><ln>  3</ln></same><same><ln>  4</ln>int hhg(void);</same><same><ln>  5</ln></same><same><ln>  6</ln>#endif</same><same><ln>  7</ln></same>"},{"id":"id_AC0F76473A","name":"untitled.tests.c","section_count":0,"deleted_line_count":0,"added_line_count":0,"content":"<same><ln>  1</ln>#include &quot;untitled.h&quot;</same><same><ln>  2</ln>#include &lt;assert.h&gt;</same><same><ln>  3</ln>#include &lt;stdio.h&gt;</same><same><ln>  4</ln></same><same><ln>  5</ln>static void example(void)</same><same><ln>  6</ln>{</same><same><ln>  7</ln>    assert(hhg() == 6*9);</same><same><ln>  8</ln>}</same><same><ln>  9</ln></same><same><ln> 10</ln>typedef void test(void);</same><same><ln> 11</ln></same><same><ln> 12</ln>static test * tests[ ] =</same><same><ln> 13</ln>{</same><same><ln> 14</ln>    example,</same><same><ln> 15</ln>    (test*)0,</same><same><ln> 16</ln>};</same><same><ln> 17</ln></same><same><ln> 18</ln>int main(void)</same><same><ln> 19</ln>{</same><same><ln> 20</ln>    size_t at = 0;</same><same><ln> 21</ln>    while (tests[at])</same><same><ln> 22</ln>    {</same><same><ln> 23</ln>        tests[at++]();</same><same><ln> 24</ln>        putchar('.');</same><same><ln> 25</ln>    }</same><same><ln> 26</ln>    printf(&quot;\\n%zd tests passed&quot;, at);</same><same><ln> 27</ln>    return 0;</same><same><ln> 28</ln>}</same><same><ln> 29</ln></same>"}]);
+  
+  var display = function(node,name,value) {
+    if ($(node).attr('disabled') !== 'disabled') {
+      $(name).css('display', value);
+    }
+  };
+  var allLineCountButtons = $('.diff-deleted-line-count, .diff-added-line-count');
+  var off = { 'disabled':true, 'title':'' }; 
+  var disableAllLineCountButtons = function() {
+    allLineCountButtons.attr(off);
+  };
+
+  $('.filename').click(function() {
+    var tr = $(this).parent().parent();
+    var del = tr.find('.diff-deleted-line-count');
+    var add = tr.find('.diff-added-line-count');
+    disableAllLineCountButtons();
+    del.attr('disabled', false)
+       .attr('title', 'Toggle deleted lines on/off');
+    add.attr('disabled', false)
+       .attr('title', 'Toggle added lines on/off');
+  });
+
+  $('.diff-deleted-line-count').toggle(
+    function() { display(this,'deleted','none' ); },
+    function() { display(this,'deleted','block'); }
+  );
+  $('.diff-added-line-count').toggle(
+    function() { display(this,'added','none' ); },
+    function() { display(this,'added','block'); }
+  );
+  
+  disableAllLineCountButtons();
+  $('#' + 'id_E239ECBFEE').click();  
+  $('input[type=radio]').hide();
+  
+});
+
+//--></script>
+
+<table cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_2FF9B8065A" >
+          <input id="radio_id_2FF9B8065A"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="cyber-dojo.sh"/>
+          <label>
+            cyber-dojo.sh
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_5A8BE3F4A3" >
+          <input id="radio_id_5A8BE3F4A3"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="instructions"/>
+          <label>
+            instructions
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_254EEEF61E" >
+          <input id="radio_id_254EEEF61E"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="makefile"/>
+          <label>
+            makefile
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_D6DCE691CB" >
+          <input id="radio_id_D6DCE691CB"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="output"/>
+          <label>
+            output
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+            <div class="diff-deleted-line-count small button">
+              3
+            </div>
+            
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+          <div class="diff-added-line-count small button">
+            2
+          </div>
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_E239ECBFEE" >
+          <input id="radio_id_E239ECBFEE"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="untitled.c"/>
+          <label>
+            untitled.c
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+            <div class="diff-deleted-line-count small button">
+              1
+            </div>
+            
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+          <div class="diff-added-line-count small button">
+            1
+          </div>
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_374D410C07" >
+          <input id="radio_id_374D410C07"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="untitled.h"/>
+          <label>
+            untitled.h
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+      </td>      
+    </tr>
+    <tr>
+      <td align="left">        
+        <div class="filename"
+             id="id_AC0F76473A" >
+          <input id="radio_id_AC0F76473A"
+                 name="filename"
+                 type="radio"
+                 checked="checked"
+                 value="untitled.tests.c"/>
+          <label>
+            untitled.tests.c
+          </label>
+        </div>
+      </td>    
+      <td align="right">
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td align="right">
+      </td>      
+    </tr>
+</table>
+
+      </div>
+      <div class="panel">
+        
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#donate').click(function() {
+    cd.postTo('https://www.paypal.com/cgi-bin/webscr',
+      { cmd: '_s-xclick',
+        hosted_button_id: '7HAUYJCMFCS8C'
+      }, '_blank');                  
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Make donation to buy Raspberry Pi'es for schools"
+       id="donate"
+       value="donate"/>
+
+        <br/>
+        
+<script language="javascript" type="text/javascript"><!--
+
+$(document).ready(function() {
+
+  $('#feedback').click(function() {
+    cd.dialog_feedback();
+  });
+
+});
+
+//--></script>
+
+<input type="button"
+       class="button"
+       title="Give feedback"
+       id="feedback"
+       value="feedback"/>
+
+      </div>
+    </td>    
+    <td>
+      
+<div class="edgeless panel" id="diff_panel">
+  <div class="diffed_code" id="diff_sheet">
+  </div>
+</div>
+
+
+    </td>
+  </tr>
+</table>
+
+
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+
