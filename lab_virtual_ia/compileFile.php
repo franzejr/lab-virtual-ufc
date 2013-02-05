@@ -29,7 +29,7 @@
  	fwrite($Handle, $text);
  	fclose($Handle);
  	
- 	exec("python ".$tempFile." >&  output");
+ 	exec("python ".$tempFile." >>  output");
  	//load the file
  	include("output");
  	system("rm -f output");
@@ -43,10 +43,10 @@
  	fwrite($Handle, $text);
  	fclose($Handle);
  	//Compiling
- 	exec("javac ".$tempFile." >&  output_error");
+ 	exec("javac ".$tempFile." 2>  output_error");
 
  	//Executing and putting the output in a file
- 	exec("java ".$className." >&  output");
+ 	exec("java ".$className." >>  output");
 
  	if (file_exists($className.".class") ){
 		include('output');	
