@@ -12,7 +12,7 @@
  $area = $_POST['area'];
 
  $loginFolderArea = "./students/$login/$area/";
- $loginFolderTemp = "./students/$login/temp/";
+ $loginFolderTemp = "./students/$login/$area/temp/";
  $binFolder = "./bin/$area/";
  $binFolderElements = "./bin/$area/*";
 

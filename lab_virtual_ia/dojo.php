@@ -624,7 +624,7 @@ $(document).ready(function() {
 
   $('#source_code').click(function() {
     $.get("students/zipFiles.php", {login : getLogin(), area: getArea()});
-    window.location.href = "students/"+getLogin() +"/arquivos.zip"
+    window.location.href = "students/"+getLogin()+"/arquivos.zip"
   });
 
 
