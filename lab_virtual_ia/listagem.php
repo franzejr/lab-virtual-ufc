@@ -46,7 +46,7 @@
           <ul>         
               <li><a href="dojo.php?area=a_estrela">Busca em Árvore</a> <small>(largura, profundidade, A*, ...)</small></li>
               <li><a href="dojo.php?area=minimax">MiniMax</a></li>
-              <li><a href="dojo.php?area=#">Têmpera Simulada e Hill Climbing</a></li>
+              <li><a href="dojo.php?area=">Têmpera Simulada e Hill Climbing</a></li>
               <li><a href="dojo.php?area=algoritmos_geneticos">Algoritmos Genéticos</a></li>
               <li>Constraint Programming</li>
           </ul>
@@ -63,7 +63,7 @@
               <li>Support Vector Machines (SVM)</li>
               <li>...</li>
             </ul>
-          <li>Redes Neurais</li>
+          <li><a href="dojo.php?area=redes_neurais">Redes Neurais</a></li>
           <li><b>Técnicas de Classificação</b></li>
             <ul>
               <li>K Means</li>

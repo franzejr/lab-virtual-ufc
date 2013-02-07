@@ -234,9 +234,8 @@ function isDocumentFile(){
 }
 
 function saveFile(){ 
-
+	
   if(!isReadOnly() && !isDocumentFile() ){
-    spinners.show();
       $.ajax({
           url: "students/saveFile.php",
           type: "post",
@@ -260,10 +259,9 @@ function saveFile(){
           complete: function(){
               // enable the inputs
               cd.loadFile("output");
-              spinners.hide();
           }
         });
-        spinners.hide();
+        //spinners.hide();
   }
 }
 
@@ -537,9 +535,10 @@ $(document).ready(function() {
       var outputTextArea = getOutputTextArea();
 
       //var tape = $("#tape textarea").val();
-
+      //$("#file_content_for_output").val("");
       saveFile();
       spinners.show();
+      //$("#file_content_for_output").val("");
       $.ajax({
         url: "compileFile.php",
         type: "post",
@@ -547,6 +546,7 @@ $(document).ready(function() {
         // callback handler that will be called on success
         success: function(response, textStatus, jqXHR){
             // log a message to the console
+            //spinners.show();
             console.log(response);
             outputTextArea.innerHTML = response;
         },
@@ -574,6 +574,7 @@ $(document).ready(function() {
       spinners.hide();
 
       run.click(function() {
+        //$("#file_content_for_output").val("");
         getOutputValue();
       });
       
@@ -624,7 +625,7 @@ $(document).ready(function() {
 
   $('#source_code').click(function() {
     $.get("students/zipFiles.php", {login : getLogin(), area: getArea()});
-    window.location.href = "students/"+getLogin()+"/arquivos.zip"
+    window.location.href = "students/"+getLogin() +"/arquivos.zip"
   });
 
 

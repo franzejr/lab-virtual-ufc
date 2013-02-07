@@ -43,6 +43,7 @@ int main()
         teste.push_back(Codificar(result));
     }
     int cont=1;
+    cout << "Teste" <<endl;
     for(int i = 0 ; i < 150 ; i ++){
         teste = AG(teste, 1, false, 0, 0, 3, 0);
 
@@ -58,6 +59,7 @@ int main()
         }
     }
 
+    cout << "Terminado" << endl;
 
     return 0;
 }
