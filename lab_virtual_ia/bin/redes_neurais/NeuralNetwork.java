@@ -76,8 +76,6 @@ public class NeuralNetwork
                         }
                 }
                 
-                //TODO
-                // Não entendi a questão do momento - ou momentum.
         }
         
         public double getOutput( int index ) throws Exception
