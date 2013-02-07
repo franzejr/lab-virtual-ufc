@@ -1,5 +1,3 @@
-
-
 import java.lang.Math;
 
 public class NeuralNetwork
@@ -79,7 +77,7 @@ public class NeuralNetwork
                 }
                 
                 //TODO
-                // Nao entendi a questao do momento - ou momentum.
+                // Não entendi a questão do momento - ou momentum.
         }
         
         public double getOutput( int index ) throws Exception
