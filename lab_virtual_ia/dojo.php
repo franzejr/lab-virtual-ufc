@@ -379,8 +379,8 @@ $(document).ready(function() {
     //     echo "</table>";
     //   echo "</div>";
 
-  }if($extensao == "txt" || $extensao == "mt" || $extensao == "java" 
-              || $extensao == "py"|| $extensao == "c" ||  $extensao == "cpp"){
+  }if($extensao == "txt" || $extensao == "mt" || $extensao == "java" ||
+              $extensao == "m" || $extensao == "py"|| $extensao == "c" ||  $extensao == "cpp"){
       echo "<div class='filename_div' ";
            echo "name='$fname' ";
            echo "id='$id'><table cellspacing='0' cellpadding='0'><tr><td><textarea class='line_numbers' ";

@@ -1,0 +1,12 @@
+A rede sera treinada com os seguintes parametros:
+Taxa de aprendizado. Valor atual: 0.2
+Numero de epocas. Valor atual: 100000
+Momentum. Valor atual: 0.1
+Erro aceitavel (para calculo de estatisticas). Valor atual:0.01
+
+Resultados para o conjunto de treinamento: 
+0.0, 0.0,  -> 2.743984942843095E-5,      erro: 2.743984942843095E-5
+0.0, 1.0,  -> 0.9977381399520059,      erro: 0.002261860047994113
+1.0, 0.0,  -> 0.9977378125805657,      erro: 0.0022621874194342917
+1.0, 1.0,  -> 4.812197218484099E-7,      erro: 4.812197218484099E-7
+Erro no conjunto de teste: 0.0%

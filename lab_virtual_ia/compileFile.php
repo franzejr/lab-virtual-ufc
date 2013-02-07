@@ -22,7 +22,7 @@
 
  $tempFile = $fileName;
  
- $timeInfiniteLoop = 15;
+ $timeInfiniteLoop = 45;
 	
  if($fileExtension == "py"){
  
@@ -60,7 +60,44 @@
  	//load the file
  	include("./students/".$login."/$area/temp/output");
 
- }elseif ($fileExtension == "java") {
+}elseif($fileExtension == "m"){
+ 
+ 	//Limpando os outputs anteriores
+	system("cd $loginFolderTemp && rm -f *");
+	
+ 	//Copy the bin files
+ 	exec("cp $binFolderElements $loginFolderTemp");
+
+ 	$filePath = $loginFolderArea.$fileName;
+	//Copy the bin files
+ 	exec("cp $filePath $loginFolderTemp"); 	
+ 
+ 	$time1 = time();
+ 	exec("cd $loginFolderTemp && octave -q ".$fileName." 1>  output 2>&1 &");
+ 	
+ 	//Pegando o pid
+	exec("pgrep octave",$pids);
+	
+	while( !(empty($pids)) ){
+		system("rm pid");
+		//Verifica atraves de um arquivo se o pid do processo ainda esta rodando
+		exec("pgrep octave >> pid",$pids);
+		$pid = file_get_contents("pid");
+		if($pid == "") break;
+
+		$time2 = time();
+
+		//Fazendo verificacao se o programa esta rodando mais que 15s
+		if(($time2 - $time1) > $timeInfiniteLoop){ 
+			echo "A execucao do seu programa durou mais que 45s"; 
+			exec("killall octave"); break; 
+		}
+	}
+ 	//load the file
+ 	exec("cd $loginFolderTemp && cp *.jpg *png ../");
+ 	include("./students/".$login."/$area/temp/output");
+
+}elseif ($fileExtension == "java") {
 
  	$className = $format[0]; 	
 

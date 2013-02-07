@@ -9,7 +9,7 @@ public class Main {
 	
 	
 	private static void runInterface() throws Exception{
-		Parser parser = new Parser(new File("treinamento.txt"));
+		Parser parser = new Parser(new File("../treinamento.txt"));
 		
 		NeuralNetwork NN = new NeuralNetwork(parser.getN1(), parser.getN2(), parser.getN3());
 		
@@ -18,16 +18,16 @@ public class Main {
 		Scanner ler = new Scanner(System.in);
 		
 		/* Parametros */
-		double erroAceitavel = 0.01, taxaAPrendizado = 0.1, momentum = 0.1;
+		double erroAceitavel = 0.01, taxaAPrendizado = 0.2, momentum = 0.1;
 		int numEpocas = 100000;
 		
 				
 		
 		System.out.println("A rede sera treinada com os seguintes parametros:\n" +
 				"Taxa de aprendizado. Valor atual: "+taxaAPrendizado+"\n"+
-				"Número de épocas. Valor atual: "+numEpocas+"\n"+
+				"Numero de epocas. Valor atual: "+numEpocas+"\n"+
 				"Momentum. Valor atual: "+ momentum + "\n"+
-				"Erro aceitavel (para cálculo de estatísticas). Valor atual:"+erroAceitavel+"\n");
+				"Erro aceitavel (para calculo de estatisticas). Valor atual:"+erroAceitavel+"\n");
 			
 		
 		
