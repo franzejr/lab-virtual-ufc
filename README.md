@@ -12,7 +12,6 @@ Back-end:
 Possíveis problemas:
 - Foi feito um timeout para a prevenção de loops infinitos
 - Problemas com gerenciamento de memória tem que ser tratado no futuro.
-- 
 
 ## Vídeos
 
